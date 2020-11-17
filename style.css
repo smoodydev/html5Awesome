@@ -1,0 +1,58 @@
+body{
+    background-color: #E84610;
+    padding: 0;
+    margin: 0;   
+}
+
+.wrapper{
+    background-color: white;
+    padding: 10%;
+    margin: 100px 5%;
+    border: solid slategray 3px;
+    border-radius: 20px;
+    
+}
+.navHeader{
+    text-align: center;
+}
+header{
+    background-color: white;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.wrapper div{
+    border-bottom: solid black 3px;
+    padding-bottom: 40px;
+}
+
+.wrapper .navImageMap{
+    background-color: #E84610;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    border: solid white 3px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.navImageMap img{
+    border-radius: 10px
+}
+
+
+.exDiv{
+    height: 300px;
+    background-color: white;
+    border: solid gray 3px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+code {
+    background-color: #eee;
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 0 3px;
+}

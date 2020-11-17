@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css?q=1">
+      <title>5 Tips and Tricks</title>
+   </head>
+   <body>
+      <header class="nav">
+         <div class="navHeader">
+            <h1>5 Awesome HTML Tricks!</h1>
+         </div>
+      </header>
+      <div class="wrapper">
+         <div class="navImageMap">
+            <map name="lessonMap">
+               <area alt="HTML Link" shape="rect" coords="0,0,50,50" href="#html">
+               <area alt="CSS Link" shape="rect" coords="50,0,100,50" href="#css">
+               <area alt="JavaScript Link" shape="rect" coords="0,50,50,100" href="#javaScript">
+               <area alt="Python Link" shape="rect" coords="50,50,100,100" href="#python">
+            </map>
+            <img src="lessonimages.png" width=100 height=100 usemap="#lessonMap" alt="Image of Lessons">
+         </div>
+         <div>
+            <h3>Make text inputs - With Dropdown Recommendations!  Is this a HTML ONLY autocomplete?</h3>
+            <p>Not quite... but I love it!</p>
+            <p>Next time you are thinking of using a dropdown or text input - why not try incorporate a datalist?  It allows uses enter their input but also gives a dropdown of other options.  Think of it as a lightweight autocomplete or let user enter frequently entered values.</p>
+            <label for="lesson">What Lesson are you on?</label>
+            <input type="text" id="lesson" list="lessonsOptions">
+            <datalist id="lessonsOptions">
+               <option value="HTML"></option>
+               <option value="CSS"></option>
+               <option value="JavaScript"></option>
+               <option value="Python"></option>
+            </datalist>
+         </div>
+         <div>
+            <h3>Map an Image!</h3>
+            <p>
+               You can create "maps" on your images to create links or clickable areas within the image! <br>
+               How you want to use it is up to you - as an example I created a sticky navigation element, try it out!
+            </p>
+            <p>For another example check out <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_images_map2">this link to W3 schools</a>.</p>
+         </div>
+         <div>
+            <h3>Stop caching of certain files!</h3>
+            <p>
+               A common annoyance for new developers is caching - when you browser stores static files (css,
+               images,
+               js, etc..) to speed up load times of new pages.
+               It is this caching that causes changes to these files not be be seen when you refresh you page (I am
+               sure at some stage you have/will experience this).
+               <br>
+               A super handy trick to remember is the "get args" method - sound complicated?  It really isn't!  Add a get argument at the end of your href or src and it will always think you are loading a different file - which will mean you always get the most up to data version!
+               EG.
+               <code>href="style.css"</code> becomes <code>href="style.css?foo=bar"</code> or
+               <code>href="style.css?abc=123"</code> or maybe even
+               <code>href="style.css?stephen=awesome"</code><br><br>
+               Do remember to take remove the get argument before deploying though!
+            </p>
+         </div>
+         <div>
+            <h3>Editable Pages? The page is a form?</h3>
+            <p>This one is for later on in the course - Flask/Django students who want to make use of one of the
+               nicest
+               ways to doing a text input. This is such a great tool for when you want a user to edit a page like a
+               profile or a recipe and see EXACTLY how it is going to render.
+            </p>
+            <p contenteditable="true">This text here - You can COMPLETELY change! Click it and type!</p>
+            <p>But you can use it for MORE than just <code>p</code> tags elements - What are the most important
+               things
+               in life?
+            </p>
+            <ol>
+               <li contenteditable="true">Coding</li>
+               <li contenteditable="true">Coffee</li>
+               <li contenteditable="true">Sleep</li>
+            </ol>
+            <br>
+         </div>
+         <div>
+            <h3>Give some love to SVG's!</h3>
+            <p>You might see SVGs (Scalable Vector Graphics) on many websites including versions of Bootstrap!
+               But
+               once you get the basics of them, they honestly can be super helpful create images and detailing
+               which in my opinion are completely under appriciated!
+            </p>
+            <p>Really good place to start playing around with making your own is the editor <a
+               href="https://editor.method.ac/">method.ac</a>. Feel free to check the source code though
+               for the examples!
+            </p>
+            <p>If you want icons that you can style to your colour scheme of your website - SVG's are the way to
+               go! 
+            </p>
+            <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+               <g>
+                  <line fill="none" stroke="#000" stroke-width="3" stroke-opacity="null" fill-opacity="null"
+                     x1="0" y1="0" x2="80" y2="80" id="svg_11">
+                  </line>
+                  <line id="svg_12" y2="0" x2="80" y1="80" x1="0"
+                     fill-opacity="null" stroke-opacity="null" stroke-width="3" stroke="#000" fill="none">
+                  </line>
+               </g>
+            </svg>
+            <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+               <a href="https://codeinstitute.net/">
+                  <g>
+                     <ellipse stroke="#E84610" ry="35" rx="35" id="svg21" cy="40" cx="40" fill-opacity="null"
+                        stroke-opacity="null" stroke-width="10" fill="none" />
+                  </g>
+               </a>
+            </svg>
+            <a href="https://www.google.ie/search?q=rhino">
+               <svg width="79" height="80" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                     <path stroke="#000" id="svg31"
+                        d="m8.1373,54.58457c-0.24006,-1.22878 -0.26252,-2.54686 -0.26252,-2.54686c0,0 -3.02609,-4.09363 -4.51199,-6.41362c-1.25258,-1.95731 -3.33143,-7.5672 -3.33143,-7.5672c0,0 -0.11053,-1.41778 0.08343,-1.4575c0.3146,-0.06292 1.94558,2.14942 3.53722,3.44103c1.63946,1.33057 3.52074,2.20571 3.52074,2.20571l2.05772,0c0,0 -1.69016,-6.90357 0.47793,-5.99881c0.78333,0.10268 1.21623,2.71432 2.40934,3.00152c1.39799,-0.53395 2.0864,-6.7951 2.0864,-6.7951c0,0 -0.42515,-1.16578 -0.40602,-2.27279c0.01542,-0.73192 0.47884,-1.56738 0.47884,-1.56738c0,0 -0.98847,0.25588 -1.66605,-0.08276c-0.61061,-0.30555 -1.54344,-1.49371 -1.79041,-2.37212c-0.30568,-1.08734 -0.22638,-2.29029 -0.5511,-2.98156c-0.03221,-0.54248 0.41714,-0.7274 0.6558,-0.47281c0.89838,0.95847 2.08902,1.06042 2.34598,1.25662c1.07518,0.82111 2.88855,0.93564 3.15297,0.77112c-2.3796,-4.60612 0.63937,-5.56241 1.05999,-5.66004c0.5264,0.8894 1.3196,1.95868 1.547,2.93024c0.30139,0.59125 0.27687,-0.24921 0.27687,-0.24921c0,0 0.01542,-2.47897 0.70255,-4.33529c0.15839,-0.43304 1.03397,-1.81566 1.61769,-1.93666c0.21161,-0.04385 0.66035,-0.14265 1.13781,-0.80887c1.21989,-1.70223 4.54852,-1.41754 4.54852,-1.41754c0,0 0.26944,0.19373 0.77324,0.19042c0.44481,-0.00408 8.27203,-0.72186 11.4731,1.06729c2.15166,1.20259 6.00005,0.84293 10.63558,-1.21463c1.46312,-0.6494 5.68898,-0.81804 5.68898,-0.81804c0,0 1.59825,0.13776 2.89546,0.81929c2.02241,1.06253 5.87371,0.65118 8.23381,1.04034c0.91086,0.15069 2.65481,1.47734 4.09786,2.71574c4.537,3.89335 7.18102,12.61206 6.86135,15.58158c-0.62301,5.78746 -4.33376,15.70172 -5.97306,20.06109c-0.66321,1.76366 -1.00472,4.44161 -0.85959,6.47792c0.04228,0.59303 -0.50206,2.07627 -1.53426,3.08744c-1.45467,1.42509 -0.35818,3.51478 -0.2237,4.47523c0.1339,0.95794 0.08926,2.18668 -0.3056,2.45994c-0.39322,0.27152 -6.01354,1.80055 -6.17841,-0.23766c-0.82311,-2.30112 3.21867,-5.79631 2.75652,-9.8587c-1.32254,-2.70285 -1.62971,-8.72416 -1.84142,-9.64832c-0.22144,-4.15853 -4.55429,2.3562 -6.7391,3.68944c-6.27926,3.83181 -13.36519,2.10448 -13.92248,1.78265c-0.76471,3.61193 0.04254,5.39753 0.09461,5.8372c-0.17189,2.46309 1.52027,6.4112 1.89826,8.83109c0.30945,1.93944 -4.97853,1.93944 -6.42873,1.86214c-1.19379,-0.49843 0.60086,-4.1296 0.89333,-4.5348c0.39822,-3.11956 -1.82273,-5.91612 -1.82273,-5.91612c0,0 -0.15863,2.79656 -0.60008,5.14448c0.01841,1.10669 0.72647,1.91095 0.82958,2.89787c0.10949,1.054 -0.40602,1.19144 -0.40602,1.19144c0,0 -4.05387,1.12997 -5.07517,-0.18298c-0.51223,-0.24986 -0.95872,0.15732 -1.31745,-0.27572c-0.24924,-0.30304 0.16208,-2.03675 0.47086,-2.51619c0.26411,-0.41227 2.02652,-0.50126 2.04017,-3.8194c-0.4367,-5.8941 -4.03252,-8.36163 -4.30035,-10.65439c-1.74161,1.05897 -3.57282,-0.93139 -3.57282,-0.93139c0,0 -0.47882,0.86189 -1.00602,1.02494c-0.42302,0.12919 -1.97486,-1.41988 -2.49454,-2.32242c-0.16773,3.53459 -2.04227,2.59156 -2.04227,2.59156c0,0 -0.66271,1.73662 -1.71603,2.57579c-2.59639,2.0686 -3.07232,1.90408 -4.14409,3.4825c-0.60362,0.88892 -1.66449,-0.42448 -2.36543,-0.01564c-2.53822,1.48054 -4.07173,-0.41126 -3.95067,-4.61109z"
+                        fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="none"></path>
+                  </g>
+               </svg>
+            </a>
+            <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+               <g>
+                  <line id="svg41" x1="10" y1="20"
+                     y2="20" x2="70" stroke-width="4" stroke="#FF0000" fill="none" />
+                  <line id="svg42" x1="10" y1="40"
+                     y2="40" x2="70" stroke-width="4" stroke="#00FF00" fill="none" />
+                  <line id="svg43" x1="10" y1="60"
+                     y2="60" x2="70" stroke-width="4" stroke="#0000FF" fill="none" />
+               </g>
+            </svg>
+            <p>PS - All the lines CAN operate as individual elements. I placed an <code>a</code> tag on the
+               rhino SVG so the entire element can be clicked. Alternatively, I have place an <code>a</code>
+               tag on the actual cirle of the Code Institute log, so only the cirle itself can be clicked!
+            </p>
+         </div>
+         <div class="exDiv" id="html">Example Div For Image Mapping - HTML</div>
+         <div class="exDiv" id="css">Example Div For Image Mapping - CSS</div>
+         <div class="exDiv" id="javaScript">Example Div For Image Mapping - JavaScript</div>
+         <div class="exDiv" id="python">Example Div For Image Mapping - Python</div>
+      </div>
+   </body>
+</html>
