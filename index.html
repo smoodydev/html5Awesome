@@ -14,27 +14,47 @@
       </header>
       <div class="wrapper">
          <div class="navImageMap">
+
+         <!-- Create a map and give it a name -->
             <map name="lessonMap">
+            <!-- areas are the location on the map where you want to create the links
+                use alt's for screen readers, shape to pick what -shape.  
+                coords are where to place the area.  Starting from the top left.
+                "0,0,50,50" would be a square starting from the very top left of an image and would be 50 pixels wide and 50 pixels down.
+                Then - the fun part.  Set up your href like you would any other link!
+             -->
                <area alt="HTML Link" shape="rect" coords="0,0,50,50" href="#html">
                <area alt="CSS Link" shape="rect" coords="50,0,100,50" href="#css">
                <area alt="JavaScript Link" shape="rect" coords="0,50,50,100" href="#javaScript">
                <area alt="Python Link" shape="rect" coords="50,50,100,100" href="#python">
             </map>
+
+            <!-- Once you have made you map - attach it with the usemap attribute. -->
             <img src="lessonimages.png" width=100 height=100 usemap="#lessonMap" alt="Image of Lessons">
          </div>
+
+
+
+
+
          <div>
             <h3>Make text inputs - With Dropdown Recommendations!  Is this a HTML ONLY autocomplete?</h3>
             <p>Not quite... but I love it!</p>
             <p>Next time you are thinking of using a dropdown or text input - why not try incorporate a datalist?  It allows uses enter their input but also gives a dropdown of other options.  Think of it as a lightweight autocomplete or let user enter frequently entered values.</p>
             <label for="lesson">What Lesson are you on?</label>
+            <!-- Just like a regular input - create it then use the list attribute to name a list you want to use. -->
             <input type="text" id="lesson" list="lessonsOptions">
+            <!-- Create a datalist.  users won't be able to see this element.  The id must match the list name you gave in the input. -->
             <datalist id="lessonsOptions">
+            <!-- Set up your options elements inside your datalist -->
                <option value="HTML"></option>
                <option value="CSS"></option>
                <option value="JavaScript"></option>
                <option value="Python"></option>
             </datalist>
          </div>
+
+         
          <div>
             <h3>Map an Image!</h3>
             <p>
@@ -43,6 +63,9 @@
             </p>
             <p>For another example check out <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_images_map2">this link to W3 schools</a>.</p>
          </div>
+
+
+         <!-- This one is super easy - check down below for details! -->
          <div>
             <h3>Stop caching of certain files!</h3>
             <p>
@@ -60,6 +83,8 @@
                Do remember to take remove the get argument before deploying though!
             </p>
          </div>
+
+
          <div>
             <h3>Editable Pages? The page is a form?</h3>
             <p>This one is for later on in the course - Flask/Django students who want to make use of one of the
@@ -67,11 +92,13 @@
                ways to doing a text input. This is such a great tool for when you want a user to edit a page like a
                profile or a recipe and see EXACTLY how it is going to render.
             </p>
+            <!-- Create the type of element you want to be able to be edited.  then give it the contenteditable attribute.  Set it to true -->
             <p contenteditable="true">This text here - You can COMPLETELY change! Click it and type!</p>
             <p>But you can use it for MORE than just <code>p</code> tags elements - What are the most important
                things
                in life?
             </p>
+            <!-- We can use it on more that just p elements - we can even use it on list (great for recipe books) -->
             <ol>
                <li contenteditable="true">Coding</li>
                <li contenteditable="true">Coffee</li>
@@ -79,6 +106,8 @@
             </ol>
             <br>
          </div>
+
+         <!-- Give some love to SVG's!  Ever since I picked them up, I have used them everwhere -->
          <div>
             <h3>Give some love to SVG's!</h3>
             <p>You might see SVGs (Scalable Vector Graphics) on many websites including versions of Bootstrap!
@@ -91,10 +120,17 @@
                for the examples!
             </p>
             <p>If you want icons that you can style to your colour scheme of your website - SVG's are the way to
-               go! 
+               go! Check the source code to check out the links!
             </p>
+
+            <!-- Width and height can be changed to make the resize as too can all the attribute! -->
             <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg">
                <g>
+               <!-- fill is useful for when you have shapes or connected lines.  It allows you to colour in a shape.
+               stroke is what color the lines will be.  If you clone this or copy the code, they it out!
+               x1 and y1 are the coordinates you start drawing at.  x2 and y2 are where the line will end.  Just like image mapping, the
+                coordinates start from the top left and then work across and down.
+                -->
                   <line fill="none" stroke="#000" stroke-width="3" stroke-opacity="null" fill-opacity="null"
                      x1="0" y1="0" x2="80" y2="80" id="svg_11">
                   </line>
@@ -111,6 +147,7 @@
                   </g>
                </a>
             </svg>
+            <!-- PSST!  I wrapped the entire SVG in an a link -->
             <a href="https://www.google.ie/search?q=rhino">
                <svg width="79" height="80" xmlns="http://www.w3.org/2000/svg">
                   <g>
@@ -122,8 +159,10 @@
             </a>
             <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg">
                <g>
+                  <a href="https://www.google.ie/search?q=Easter+Egg">
                   <line id="svg41" x1="10" y1="20"
                      y2="20" x2="70" stroke-width="4" stroke="#FF0000" fill="none" />
+                  </a>
                   <line id="svg42" x1="10" y1="40"
                      y2="40" x2="70" stroke-width="4" stroke="#00FF00" fill="none" />
                   <line id="svg43" x1="10" y1="60"
